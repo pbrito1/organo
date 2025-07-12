@@ -1,10 +1,10 @@
 import './text.css'
 
-export const Text = () => {
+export const Text = (props) => {
     return (
-        <div>
-            <label>Nome</label>
-            <input type="text" placeholder="Digite seu nome" />
+        <div className='text'>
+            <label>{props.label}</label>
+            <input placeholder={`Digite seu ${props.label.toLowerCase()}`} />
         </div>
     )
 }
