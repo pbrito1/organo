@@ -12,7 +12,7 @@ export const Forms = (props) => {
         'Design',
         'Marketing',
         'Vendas'
-        ];
+    ];
 
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
