@@ -53,7 +53,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Forms insertColabs={colab => insertColabs(colab)} />
+      <Forms teamName={times.map(time => time.nome)} insertColabs={colab => insertColabs(colab)} />
 
       {times.map(time => <Times key={time.nome} nome={time.nome} primaryColor={time.primaryColor} secondaryColor={time.secondaryColor} />)}
 

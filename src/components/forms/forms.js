@@ -6,14 +6,6 @@ import { useState } from 'react';
 
 export const Forms = (props) => {
     
-    const items = [
-        '',
-        'Programação',
-        'Design',
-        'Marketing',
-        'Vendas'
-    ];
-
     const [nome, setNome] = useState('');
     const [cargo, setCargo] = useState('');
     const [imagem, setImagem] = useState('');
@@ -57,7 +49,7 @@ export const Forms = (props) => {
                     required={true} 
                     label="Times" 
                     placeholder="Selecione um time" 
-                    items={items} 
+                    items={props.teamName} 
                     valor={time} 
                     toChange={valor => setTime(valor)}
                 />
