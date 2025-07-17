@@ -56,7 +56,14 @@ function App() {
       <Banner />
       <Forms teamName={times.map(time => time.nome)} insertColabs={colab => insertColabs(colab)} />
 
-      {times.map(time => <Times key={time.nome} nome={time.nome} primaryColor={time.primaryColor} secondaryColor={time.secondaryColor} />)}
+      {times.map(time => <Times 
+      key={time.nome} 
+      nome={time.nome} 
+      primaryColor={time.primaryColor} 
+      secondaryColor={time.secondaryColor} 
+      colabs={colabs.filter(colab => colab.time === time.nome)}
+      insertColabs={colab => insertColabs(colab)}
+      />)}
 
 
     </div>
