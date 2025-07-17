@@ -2,6 +2,7 @@ import Banner from './components/banner';
 import Forms from './components/forms';
 import { useState } from 'react';
 import Times from './components/times';
+import './components/colabs'
 
 function App() {
 
@@ -56,6 +57,7 @@ function App() {
       <Forms teamName={times.map(time => time.nome)} insertColabs={colab => insertColabs(colab)} />
 
       {times.map(time => <Times key={time.nome} nome={time.nome} primaryColor={time.primaryColor} secondaryColor={time.secondaryColor} />)}
+
 
     </div>
   );
